@@ -1,0 +1,3 @@
+Serve para dividir o projetos em partes diferentes, como por exemplo do html
+
+o sinal de > faz com que o sistema saiba q é pra pegar uma aprte da pasta partials

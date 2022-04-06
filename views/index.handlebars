@@ -1,0 +1,25 @@
+<div class="jumbotron">
+  <h1 class="display-4">Bem vindo ao seu diário</h1>
+  <p class="lead">Onde você pode contar e guardar um pouco de sua história.</p>
+  <hr class="my-4">
+  <a class="btn btn-primary btn-lg" href="usuarios/registro" role="button">Crie uma conta</a>
+  <a class="btn btn-primary btn-lg" href="/usuarios/login" role="button">Login</a> 
+</div>
+<hr>
+
+{{#if user}}
+<h2>Postagens recentes</h2>
+
+{{#each postagens}}
+<div class="card">
+    <div class="card-body">
+        <h3>Título: {{titulo}}</h3>
+        <p>Descrição: {{descricao}}</p> <hr>
+        <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+        <small>Categoria: {{categoria.nome}}</small><br>
+        <small>Data: {{data}}</small>
+    </div>
+</div>
+{{else}}
+{{/each}}
+{{/if}}
